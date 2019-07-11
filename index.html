@@ -11,7 +11,7 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-globe,.fa-microchip,.fa-calendar-check-o {font-size:200px}
+.fa-globe,.fa-microchip,.fa-calendar-check-o,.fa-road,.fa-area-chart,.fa-question-circle,.fa-address-card {font-size:200px}
 </style>
 <body>
 
@@ -22,16 +22,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Store</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">FAQ</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+	<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Store</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">FAQ</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
   </div>
 </div>
 <center><img src="./img/ppn.png"></center>
@@ -39,7 +36,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-green w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">Welcome</h1>
   <p class="w3-xlarge">The tool for ultimate air quality awareness is on it's way!</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Visit Our Store</button>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Store Coming Soon</button>
 </header>
 
 <!-- First Grid -->
@@ -90,6 +87,70 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
+<!-- Fourth Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-area-chart w3-padding-64 w3-text-green w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>The Math</h1>
+      <h5 class="w3-padding-32">---</h5>
+
+      <p class="w3-text-grey">---</p>
+    </div>
+  </div>
+</div>
+
+<!-- Fifth Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Our Mission</h1>
+      <h5 class="w3-padding-32">To help you get informed about what's in your air, and what to do about it!</h5>
+
+      <p class="w3-text-grey"></p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-road w3-padding-64 w3-text-green"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Sixth Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-question-circle w3-padding-64 w3-text-green w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Frequently Asked Questions</h1>
+      <h5 class="w3-padding-32">...</h5>
+
+      <p class="w3-text-grey">...</p>
+    </div>
+  </div>
+</div>
+
+<!-- Seventh Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Contact Us</h1>
+      <h5 class="w3-padding-32">...</h5>
+
+      <p class="w3-text-grey">...</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-address-card w3-padding-64 w3-text-green"></i>
+    </div>
+  </div>
+</div>
+
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge">Quote Of The Day:<div id="quote"></div></h1>
 	<script> 
@@ -123,10 +184,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 				type: "GET",
 				url: "./quotes.txt",
 				dataType: "text",
-				success: function (data) { processData(data); },
-				error: function(XMLHttpRequest, textStatus, errorThrown) { 
-				alert("Status: " + textStatus); alert("Error: " + errorThrown); 
-		}     
+				success: function (data) { processData(data); }
 			});
 	</script>
 </div>
