@@ -95,43 +95,39 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	<script> 
 		var today = new Date();
 		var x = document.getElementById("quote");
-		//x.innerHTML = Math.ceil((today - new Date(today.getFullYear(),0,1)) / 86400000);	
 		
 		
 		
 		function processData(allText) {
-    var allTextLines = allText.split(/\r\n|\n/);
-    var headers = allTextLines[0].split(',');
-    var lines = [];
+			var allTextLines = allText.split(/\r\n|\n/);
+			var headers = allTextLines[0].split(',');
+			var lines = [];
 
-    for (var i=1; i<allTextLines.length; i++) {
-        var data = allTextLines[i].split(',');
-        if (data.length == headers.length) {
+			for (var i=1; i<allTextLines.length; i++) {
+				var data = allTextLines[i].split(',');
+				if (data.length == headers.length) {
 
-            var tarr = [];
-            for (var j=0; j<headers.length; j++) {
-                //tarr.push(headers[j]+":"+data[j]);
-                tarr.push(data[j]);
-            }
-            lines.push(tarr);
-        }
-    }
-	console.log(lines[0]);
-	console.log(lines[0][0]);
-	console.log(lines[0][1]);
-	x.innerHTML = lines[Math.ceil((today - new Date(today.getFullYear(),0,1)) / 86400000)][0] + lines[Math.ceil((today - new Date(today.getFullYear(),0,1)) / 86400000)][1];	
-    console.log(lines.length);
-}
+					var tarr = [];
+					for (var j=0; j<headers.length; j++) {
+						//tarr.push(headers[j]+":"+data[j]);
+						tarr.push(data[j]);
+					}
+					lines.push(tarr);
+				}
+			}
+			x.innerHTML = lines[Math.ceil((today - new Date(today.getFullYear(),0,1)) / 86400000)][0] + " - " + lines[Math.ceil((today - new Date(today.getFullYear(),0,1)) / 86400000)][1];	
+			//console.log(lines.length);
+		}
 
- $.ajax({
-            type: "GET",
-            url: "./quotes.txt",
-            dataType: "text",
-            success: function (data) { processData(data); },
-			error: function(XMLHttpRequest, textStatus, errorThrown) { 
-			alert("Status: " + textStatus); alert("Error: " + errorThrown); 
-    }     
-        });
+	 $.ajax({
+				type: "GET",
+				url: "./quotes.txt",
+				dataType: "text",
+				success: function (data) { processData(data); },
+				error: function(XMLHttpRequest, textStatus, errorThrown) { 
+				alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+		}     
+			});
 	</script>
 </div>
 
